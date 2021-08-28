@@ -3,10 +3,11 @@
 
 import { MODAL_TYPE } from "./types";
 
-export const showModal = (title) => {
+export const showModal = (title, content) => {
   return {
     type: MODAL_TYPE.SHOW,
     title,
+    content,
   };
 };
 

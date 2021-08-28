@@ -5,7 +5,7 @@ import { closeModal } from "store/actions/modal";
 
 const CLOSEABLE_CLASSNAME = "close";
 
-function Modal({ title }) {
+function Modal({ children, title }) {
   const dispatch = useDispatch();
 
   const onClose = (e) => {
@@ -20,13 +20,8 @@ function Modal({ title }) {
     <Dim onClick={onClose} className={CLOSEABLE_CLASSNAME}>
       <ModalContainer>
         <Title>{title}</Title>
-        <Form>
-          <input placeholder="아이디" />
-          <input placeholder="패스워드" type="password" />
-          <input type="submit" value="로그인" />
-        </Form>
 
-        <SignupButton>회원이 아니신가요?</SignupButton>
+        {children}
 
         <CloseButton onClick={onClose} className={CLOSEABLE_CLASSNAME}>
           ❌
@@ -60,24 +55,6 @@ const Title = styled.h1`
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
   margin-bottom: 15px;
-`;
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  width: 300px;
-
-  input {
-    padding: 10px 8px;
-  }
-  input + input {
-    margin-top: 10px;
-  }
-`;
-
-const SignupButton = styled.div`
-  text-align: center;
-  cursor: pointer;
 `;
 
 const CloseButton = styled.button`

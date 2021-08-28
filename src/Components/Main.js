@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { showModal } from "store/actions/modal";
 import { useSelector } from "react-redux";
+import Login from "Components/Login";
 
 function Main(props) {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
 
   const onLoginClick = () => {
-    dispatch(showModal("Login"));
+    dispatch(showModal("로그인", <Login />));
   };
 
   return (
@@ -30,11 +31,12 @@ const Container = styled.div`
 const Button = styled.button`
   width: 100px;
   height: 50px;
-  border: 1px solid #000;
+  border: none;
   background: #aae0ff;
   cursor: pointer;
   border-radius: 8px;
   outline: none;
+  font-weight: bold;
 
   &:active {
     transform: scale(0.95);

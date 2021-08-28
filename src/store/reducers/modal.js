@@ -5,12 +5,14 @@ const INITIAL_STATE = {
 };
 
 export default function modal(state = INITIAL_STATE, action) {
-  switch (action.type) {
+  const { type, title, content } = action;
+  switch (type) {
     case MODAL_TYPE.SHOW:
       return {
         ...state,
         show: true,
-        title: action.title,
+        title,
+        content,
       };
 
     case MODAL_TYPE.CLOSE:
