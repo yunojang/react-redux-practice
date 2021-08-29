@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  auth: false,
+  check: false,
 };
 
 export default function auth(state = INITIAL_STATE, action) {

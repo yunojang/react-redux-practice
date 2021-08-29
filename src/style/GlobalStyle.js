@@ -36,6 +36,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     height: 100vh;
   }
+
+  button {
+    border: 0;
+    outline: none;
+  }
 `;
 
 export default GlobalStyle;

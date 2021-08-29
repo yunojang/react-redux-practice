@@ -16,7 +16,7 @@ function Main(props) {
   return (
     <Container>
       <Button onClick={onLoginClick}>로그인</Button>
-      {auth.auth && <div>환영합니다 {auth.user.name}님!</div>}
+      {auth.check && <div>환영합니다 {auth.user.name}님!</div>}
     </Container>
   );
 }
@@ -32,7 +32,7 @@ const Button = styled.button`
   width: 120px;
   height: 50px;
   border: none;
-  background: #aae0ff;
+  background: #a9cfef;
   cursor: pointer;
   border-radius: 8px;
   outline: none;

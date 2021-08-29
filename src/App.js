@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="app">
       <Main />
-      {modal.show && <Modal title={modal.title}>{modal.content}</Modal>}
+
+      {modal.show && <Modal {...modal}></Modal>}
     </div>
   );
 }

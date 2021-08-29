@@ -5,7 +5,8 @@ import { closeModal } from "store/actions/modal";
 
 const CLOSEABLE_CLASSNAME = "close";
 
-function Modal({ children, title }) {
+function Modal({ content, title }) {
+  const showCloseButton = content?.props?.closeButton ?? true;
   const dispatch = useDispatch();
 
   const onClose = (e) => {
@@ -21,11 +22,19 @@ function Modal({ children, title }) {
       <ModalContainer>
         <Title>{title}</Title>
 
-        {children}
+        {content}
 
-        <CloseButton onClick={onClose} className={CLOSEABLE_CLASSNAME}>
-          ❌
-        </CloseButton>
+        {showCloseButton ? (
+          <CloseButton onClick={onClose} className={CLOSEABLE_CLASSNAME}>
+            ❌
+          </CloseButton>
+        ) : (
+          <ButtonContainer>
+            <ConfirmButton onClick={onClose} className={CLOSEABLE_CLASSNAME}>
+              확인
+            </ConfirmButton>
+          </ButtonContainer>
+        )}
       </ModalContainer>
     </Dim>
   );
@@ -68,6 +77,19 @@ const CloseButton = styled.button`
   border: 0;
   font-size: 16px;
   cursor: pointer;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const ConfirmButton = styled.button`
+  width: 105px;
+  height: 32px;
+  background: #a9cfef;
+  cursor: pointer;
+  border-radius: 5px;
 `;
 
 export default Modal;

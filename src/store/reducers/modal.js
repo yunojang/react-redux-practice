@@ -6,6 +6,7 @@ const INITIAL_STATE = {
 
 export default function modal(state = INITIAL_STATE, action) {
   const { type, title, content } = action;
+
   switch (type) {
     case MODAL_TYPE.SHOW:
       return {

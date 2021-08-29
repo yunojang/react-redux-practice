@@ -11,7 +11,7 @@ const Form = styled.form`
     border: 2px solid #ddd;
     padding: 10px 8px;
     outline: none;
-    color: #6699bb;
+    color: #005588;
   }
   input + input {
     margin-top: 10px;
@@ -22,7 +22,7 @@ const Form = styled.form`
 
   input[type="submit"] {
     border: 0;
-    background: #aae0ff;
+    background: #a9cfef;
     border-radius: 5px;
     color: #000;
     font-weight: bold;

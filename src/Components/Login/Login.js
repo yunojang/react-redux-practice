@@ -21,14 +21,14 @@ function Login(props) {
         <input type="submit" value="로그인" />
       </LoginForm>
 
-      <SignupButton>
+      <SignupAlert>
         <span onClick={onSignup}>아직 회원이 아니신가요?</span>
-      </SignupButton>
+      </SignupAlert>
     </div>
   );
 }
 
-const SignupButton = styled.div`
+const SignupAlert = styled.div`
   color: #505050;
   font-size: 15px;
   text-align: center;
