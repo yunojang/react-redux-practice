@@ -43,10 +43,13 @@ const Dim = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 const ModalContainer = styled.div`
   position: relative;
   background: #fff;
   padding: 20px 30px;
+  animation: padeIn 0.2s cubic-bezier(0, 0, 0, 0.7),
+    slideUp 0.2s cubic-bezier(0, 0, 0, 0.7);
 `;
 
 const Title = styled.h1`
