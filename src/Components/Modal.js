@@ -46,25 +46,24 @@ const Dim = styled.div`
 const ModalContainer = styled.div`
   position: relative;
   background: #fff;
-  padding: 20px;
+  padding: 20px 30px;
 `;
 
 const Title = styled.h1`
   font-size: 24px;
   font-weight: normal;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #eee;
   padding-bottom: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 `;
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 0;
-  right: 0;
-  margin: 15px;
+  top: 20px;
+  right: 18px;
   background: none;
   border: 0;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
 `;
 

@@ -21,7 +21,9 @@ function Login(props) {
         <input type="submit" value="로그인" />
       </LoginForm>
 
-      <SignupButton onClick={onSignup}>아직 회원이 아니신가요?</SignupButton>
+      <SignupButton>
+        <span onClick={onSignup}>아직 회원이 아니신가요?</span>
+      </SignupButton>
     </div>
   );
 }
@@ -30,7 +32,9 @@ const SignupButton = styled.div`
   color: #505050;
   font-size: 15px;
   text-align: center;
-  cursor: pointer;
+  span {
+    cursor: pointer;
+  }
 `;
 
 export default Login;

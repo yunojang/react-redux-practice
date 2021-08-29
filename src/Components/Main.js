@@ -29,7 +29,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  width: 100px;
+  width: 120px;
   height: 50px;
   border: none;
   background: #aae0ff;
@@ -39,7 +39,7 @@ const Button = styled.button`
   font-weight: bold;
 
   &:active {
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
 `;
 

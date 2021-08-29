@@ -8,7 +8,7 @@ const Form = styled.form`
 
   input {
     border-radius: 5px;
-    border: 1px solid #aaa;
+    border: 2px solid #ddd;
     padding: 10px 8px;
     outline: none;
     color: #6699bb;
@@ -17,7 +17,7 @@ const Form = styled.form`
     margin-top: 10px;
   }
   input:focus {
-    border: 1px solid #6699bb;
+    border: 2px solid #6699cc;
   }
 
   input[type="submit"] {
@@ -26,6 +26,7 @@ const Form = styled.form`
     border-radius: 5px;
     color: #000;
     font-weight: bold;
+    cursor: pointer;
   }
 `;
 
