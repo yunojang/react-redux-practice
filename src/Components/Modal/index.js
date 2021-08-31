@@ -6,7 +6,7 @@ import { closeModal } from "store/actions/modal";
 const CLOSEABLE_CLASSNAME = "close";
 
 function Modal({ content, title }) {
-  const showCloseButton = content?.props?.closeButton ?? true;
+  const showCloseButton = content.props?.closeButton ?? true;
   const dispatch = useDispatch();
 
   const onClose = (e) => {
@@ -62,7 +62,7 @@ const ModalContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   border-bottom: 2px solid #eee;
   padding-bottom: 15px;

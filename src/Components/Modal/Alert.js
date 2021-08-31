@@ -19,7 +19,7 @@ const AlertText = styled.div`
   text-align: center;
   font-size: 15px;
   color: #005588;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 `;
 
 export default Alert;
